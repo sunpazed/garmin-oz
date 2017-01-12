@@ -178,23 +178,26 @@ class BasicView extends Ui.WatchFace {
 
 
       // clear the screen
-      dc.setColor(Gfx.COLOR_DK_BLUE, Gfx.COLOR_BLACK);
+      dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_WHITE);
       dc.clear();
 
       // w,h of canvas
       var dw = dc.getWidth();
       var dh = dc.getHeight();
 
-      dc.drawBitmap(0, 0, b_house);
+      var hx  = (dw/2) - (b_house.getWidth()/2);
+      var hy  = (dh/2) - (b_house.getHeight()/2);
+
+      dc.drawBitmap(hx, hy, b_house);
 
       var y = dh/2 - 40 + Math.sin(box_y) * 30;
       var x = (dw/2) - 30 + Math.cos(box_x) * (dw/3);
 
       if (y < (dh/2-40)) {
         dc.drawBitmap(x, y, b_box);
-        dc.drawBitmap(94, 0, b_twister);
+        dc.drawBitmap(hx+94, hy, b_twister);
       } else {
-        dc.drawBitmap(94, 0, b_twister);
+        dc.drawBitmap(hx+94, hy, b_twister);
         dc.drawBitmap(x, y, b_box);
       }
 
