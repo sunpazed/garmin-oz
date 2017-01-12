@@ -1,0 +1,34 @@
+<resources>
+    <strings>
+      <string id="AppName">oz</string>
+    </strings>
+
+    <drawables>
+      <bitmap id="LauncherIcon" filename="bitmaps/launcher_icon.png" />
+    </drawables>
+
+    <fonts>
+    </fonts>
+
+    <bitmaps>
+      <bitmap id="house" filename="bitmaps/house.png">
+        <palette>
+          <color>FFFFFF</color>
+          <color>AAAAAA</color>
+          <color>555555</color>
+          <color>000000</color>
+        </palette>
+      </bitmap>
+      <bitmap id="box" filename="bitmaps/box.png">
+      </bitmap>
+      <bitmap id="twister" filename="bitmaps/twister.png" dithering="none">
+        <palette>
+        <color>FFFFFF</color>
+        <color>AAAAAA</color>
+        <color>555555</color>
+        <color>000000</color>
+      </palette>
+    </bitmap>
+    </bitmaps>
+
+</resources>
